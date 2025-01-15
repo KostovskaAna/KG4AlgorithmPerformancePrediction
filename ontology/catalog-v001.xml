@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://w3id.org/ontoopt/1.0.0" uri="file:/Users/anakostovska/Desktop/OPTION/ONTOLOGIES/OntoOpt/OntoOpt.owl"/>
+    <uri id="Imports Wizard Entry" name="http://w3id.org/option-algo/1.0.0" uri="OPTION-modAlgo.owl"/>
+    <uri id="Imports Wizard Entry" name="http://w3id.org/option-algo/1.0.0" uri="file:/Users/anakostovska/Dropbox/EvoStar-2022/ontology/OPTION-algo.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/iao/2020-06-10/iao.owl" uri="external/iao.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1668165247953" name="http://w3id.org/option-algo/1.0.0" uri="OPTION-algo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1736433300870" name="http://purl.obolibrary.org/obo/iao.owl" uri="external/iao.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1736433300870" name="http://w3id.org/ontoopt" uri="OPTION.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1736433300870" name="http://w3id.org/option-algo/1.0.0" uri="OPTION-modAlgo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1736433300870" name="http://www.ontodm.com/OntoDM-core/" uri="external/OntoDM.owl"/>
     </group>
 </catalog>

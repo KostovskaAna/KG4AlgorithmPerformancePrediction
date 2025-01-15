@@ -1,0 +1,907 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/option-algo/1.0.0#"
+     xml:base="http://w3id.org/option-algo/1.0.0"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://w3id.org/option-algo/1.0.0">
+        <owl:imports rdf:resource="http://w3id.org/ontoopt/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000013 -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/ontoopt/OPTION_00000013">
+        <rdfs:label xml:lang="en">has parameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000015 -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/ontoopt/OPTION_00000015">
+        <rdfs:label xml:lang="en">has datatype</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000047 -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/ontoopt/OPTION_00000047">
+        <rdfs:label xml:lang="en">restart loop</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#preceded_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.obofoundry.org/ro/ro.owl#preceded_by">
+        <owl:inverseOf rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+        <rdfs:label xml:lang="en">preceded by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#precedes -->
+
+    <owl:ObjectProperty rdf:about="http://www.obofoundry.org/ro/ro.owl#precedes">
+        <rdfs:label xml:lang="en">precedes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000001 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000001">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/optimization_algorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000297"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/optimization_algorithm_implementation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular optimization algorithm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000002 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000002">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/optimization_algorithm_execution"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular optimization algorithm execution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000003 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000003">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/algorithm_execution"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">optimization algorithm execution part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000004 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000004">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000003"/>
+        <rdfs:label xml:lang="en">initialization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000005 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000005">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000003"/>
+        <rdfs:label xml:lang="en">mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000006 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000006">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000003"/>
+        <rdfs:label xml:lang="en">boundary correction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000007 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000007">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000003"/>
+        <rdfs:label xml:lang="en">evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000008 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000008">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000003"/>
+        <rdfs:label xml:lang="en">selection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000009 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000009">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000003"/>
+        <rdfs:label xml:lang="en">recombination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000010 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000010">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000003"/>
+        <rdfs:label xml:lang="en">parameter update</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000011 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000011">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000003"/>
+        <rdfs:label xml:lang="en">termination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000012 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000012">
+        <rdfs:subClassOf rdf:resource="http://www.ontodm.com/OntoDM-core/OntoDM_000130"/>
+        <rdfs:label xml:lang="en">algorithm module parameter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000014 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000014">
+        <rdfs:subClassOf rdf:resource="http://www.ontodm.com/OntoDM-core/OntoDM_419544"/>
+        <rdfs:label xml:lang="en">datatype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000016 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000016">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000297"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000018"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular DE</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000017 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000017">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000297"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000019"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular CMA-ES</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000018 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000018">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/optimization_algorithm_implementation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000294"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000300"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000020"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular DE implementation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000019 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000019">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/optimization_algorithm_implementation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000294"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000300"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000021"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular CMA-ES implementation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000020 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000020">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000018"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular DE execution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000021 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000021">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000308"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000019"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular CMA-ES execution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000022 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000022">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000025"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000031"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000032"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular DE initialization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000023 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000023">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000026"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000024"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular DE mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000024 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000024">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000009"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000029"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000030"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000033"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular DE recombination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000025 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000025">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">DE initialization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000026 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000026">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">DE mutation base vector strategy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000027 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000027">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">DE mutation reference vector strategy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000028 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000028">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">DE number of difference vectors</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000029 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000029">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">DE eigenvalue crossover</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000030 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000030">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">DE crossover</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000031 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000031">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">DE oversampling factor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000032 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000032">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">DE oppositional initialization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000033 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000033">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000006"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000039"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000034"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular DE boundary correction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000034 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000034">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000007"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000035"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular DE evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000035 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000035">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000008"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000036"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular DE selection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000036 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000036">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000010"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000037"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000038"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular DE parameter update</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000037 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000037">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">DE self adaptation method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000038 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000038">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">DE jso caps</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000039 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000039">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">DE boundary correction strategy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000040 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000040">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000059"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000041"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular CMA-ES initialization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000041 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000041">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000051"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000053"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000042"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular CMA-ES mutation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000042 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000042">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000006"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000054"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000043"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular CMA-ES boundary correction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000043 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000043">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000007"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000055"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000044"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular CMA-ES evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000044 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000044">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000008"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000056"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000045"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular CMA-ES selection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000045 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000045">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000009"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000050"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000046"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular CMA-ES recombination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000046 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000046">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000010"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000048"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/ontoopt/OPTION_00000013"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000049"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modular CMA-ES parameter update</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000048 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000048">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">CMA-ES covariance matrix update</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000049 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000049">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">CMA-ES step-size adaptation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000050 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000050">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">CMA-ES weight recombination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000051 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000051">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000052"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">CMA-ES distribution sampler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000052 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000052">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">CMA-ES sampling technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000053 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000053">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">CMA-ES threshold convergence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000054 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000054">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">CMA-ES boundary correction strategy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000055 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000055">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">CMA-ES sequential selection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000056 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000056">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">CMA-ES selection strategy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000058 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000058">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">CMA-ES elitism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/OPTION_00000059 -->
+
+    <owl:Class rdf:about="http://w3id.org/ontoopt/OPTION_00000059">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/ontoopt/OPTION_00000012"/>
+        <rdfs:label xml:lang="en">CMA-ES restart strategy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/ontoopt/optimization_algorithm_implementation -->
+
+    <rdf:Description rdf:about="http://w3id.org/ontoopt/optimization_algorithm_implementation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000294"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/ontoopt/OPTION_00000001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontodm.com/OntoDM-core/OntoDM_000130 -->
+
+    <rdf:Description rdf:about="http://www.ontodm.com/OntoDM-core/OntoDM_000130">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontodm.com/OntoDM-core/OntoDM_000130"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
