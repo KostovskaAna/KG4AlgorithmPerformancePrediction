@@ -15,9 +15,9 @@ The paper has two main contributions:
 1. **Extension of the OPTION Ontology**:  
   The [OPTION (OPTImization Benchmarking Ontology)](https://doi.org/10.1109/TEVC.2022.3232844) was originally developed to represent performance data for optimization algorithms derived from benchmarking studies. In this work, we extend the ontology to include vocabulary for the semantic representation of modular optimization algorithms, their components, parameters, and configuration details.
 
-   - The original OPTION ontology, the extended ontology module, and related ontology files can be found in the `ontologies` folder.  
+   - The original OPTION ontology, the extended ontology module, and related ontology files can be found in the `ontology` folder.  
    - As a proof of concept, we created a RDF knowledge base (KB) containing annotations for modular algorithms and developed a SPARQL query endpoint for easy querying.  
-   - For more details on how to use the KB, refer to the `ontologies` folder.
+   - For more details on how to use the KB, refer to the `ontology` folder.
 
 2. **Using Knowledge Graph (KG) Structures for Predicting Missing Performance Links**:  
    This study investigates the use of KG structures to predict missing performance links between optimization problems and optimization algorithms.  
